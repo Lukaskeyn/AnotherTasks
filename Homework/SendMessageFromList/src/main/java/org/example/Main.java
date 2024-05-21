@@ -23,7 +23,7 @@ public class Main {
            Iterator<String> iterator = list.iterator();// итератор
            while (iterator.hasNext()) { //проходимся циклом
                producer.send(iterator.next()); //выводим сообщения
-               TimeUnit.SECONDS.sleep(2); // задержка
+               TimeUnit.SECONDS.sleep(2); // задержка -  Thread.sleep(2000); можно было бы и так
            }
            session.close(); //закрываем сессию
            connection.close(); //соединение
